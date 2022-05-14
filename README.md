@@ -9,8 +9,7 @@ A reminder bot for [Discord]. Focused on privacy, because people who use it as a
 ## To-Do
 
 - [ ] parse "when" parameter
-      (will use java bridge with [prettytime](https://www.ocpsoft.org/prettytime/)
-      or find a way to use [recurrent](https://github.com/kvh/recurrent))
+      will use [recurrent](https://github.com/kvh/recurrent))
 - [ ] set up timed reminder system
       (maybe use a serverless function for this)
 - [ ] explore deployment options
