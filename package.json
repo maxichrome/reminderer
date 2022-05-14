@@ -1,0 +1,17 @@
+{
+	"name": "reminderer",
+	"version": "1.0.0",
+	"license": "UNLICENSED",
+	"private": true,
+	"author": {
+		"name": "maxichrome",
+		"email": "maxichrome@users.noreply.github.com"
+	},
+	"repository": "git@github.com:maxichrome/reminderer.git",
+	"main": "build/index.js",
+	"devDependencies": {
+		"@types/node": "^17.0.33",
+		"prettier": "^2.6.2",
+		"typescript": "^4.6.4"
+	}
+}

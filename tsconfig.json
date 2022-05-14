@@ -1,0 +1,8 @@
+{
+	"compilerOptions": {
+		"outDir": "build",
+		"baseUrl": "./src",
+		"target": "es5",
+		"allowSyntheticDefaultImports": true
+	}
+}
