@@ -2,7 +2,7 @@
 
 A reminder bot for [Discord], focused on privacy.
 
-**Reminderer is still under active development, so GitHub Issues is disabled.**
+**Reminderer is still under initial development, so GitHub Issues is disabled.**
 
 <!-- **If you are having issues, please contact me [on Discord][contact-discord].** -->
 
