@@ -1,6 +1,6 @@
 # Reminderer
 
-A reminder bot for [Discord], focused on privacy.
+A reminder bot for [Discord]. Focused on privacy, because people who use it as a second brain likely care.
 
 **Reminderer is still under initial development, so GitHub Issues is disabled.**
 
