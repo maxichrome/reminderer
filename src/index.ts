@@ -1,22 +1,33 @@
 // ALWAYS keep this first
 import "./configureEnv";
 
-import { client } from "./client";
+import { discord } from "./client";
 import { executeCommand } from "./commands";
 import { deployCommands } from "./deployCommands";
 import { debug } from "./logging/debug";
+import * as md5 from "md5";
 
-client.once("ready", (client) => {
+discord.once("ready", (client) => {
+	const easterEggChance = 1 / 10000;
+	const isEasterEgg = Math.random() < easterEggChance;
+
 	debug("Ready!");
+	debug("Bot ID", client.user.id);
+
+	console.info(
+		`All ready! I'm ${
+			isEasterEgg
+				? `gongaga  (...ok, really, I'm ${client.user.tag})`
+				: client.user.tag
+		}`
+	);
 
 	client.user.setActivity(/* Listening to */ "your brainwaves", {
 		type: "LISTENING",
 	});
 });
 
-client.on("messageCreate", async (message): Promise<void> => {
-	console.log("message was created :P", message.content);
-
+discord.on("messageCreate", async (message): Promise<void> => {
 	// only read messages from the owner of the bot
 	if (message.author.id !== process.env.DISCORD_OWNER_ID) return;
 
@@ -37,11 +48,13 @@ client.on("messageCreate", async (message): Promise<void> => {
 	}
 });
 
-client.on("interactionCreate", (interaction) => {
+discord.on("interactionCreate", (interaction) => {
 	if (interaction.isCommand()) {
 		executeCommand(interaction.commandName, interaction);
 	}
 });
 
-debug(`Logging into Discord...`);
-client.login(process.env.DISCORD_TOKEN);
+const token = process.env.DISCORD_TOKEN!;
+debug(`Token (hashed md5): ${md5(token)}`);
+debug(`Logging into gateway...`);
+discord.login(token);
