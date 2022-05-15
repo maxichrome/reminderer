@@ -31,9 +31,10 @@ export async function executeReminder(reminder: Reminder): Promise<void>;
 export async function executeReminder(
 	input: Reminder | Reminder["id"]
 ): Promise<void> {
-	debug(`Executing reminder ${(input as Reminder).id || input}`);
 	// if input is id, fetch reminder then execute reminder
 	if (typeof input === "number") {
+		debug(`Searching for reminder ${input}`);
+
 		const reminder = await prisma.reminder.findUnique({
 			where: {
 				id: input,
