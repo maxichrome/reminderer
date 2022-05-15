@@ -4,8 +4,6 @@ A reminder bot for [Discord]. Focused on privacy, because people who use it as a
 
 ## To-Do
 
-- [ ] explore deployment options
-      (maybe use a serverless function for command triggers too)
 - [ ] add delivery preferences
       (get reminders sent via DM or in a private server thread)
 - [ ] add reminder management (list and delete, maybe edit)
