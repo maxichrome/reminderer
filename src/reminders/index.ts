@@ -72,7 +72,7 @@ export async function executeReminder(
 		if (err instanceof DiscordAPIError) {
 			debug("API error while messaging user", err.message);
 
-			if (err.code === 50013) {
+			if (err.code === 50007) {
 				debug("No permission to DM this user");
 				// cannot message this user
 
