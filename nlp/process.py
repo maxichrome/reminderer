@@ -11,8 +11,8 @@ try:
 
 	print(
 		json({
-			"parameterised": parsed_result,
-			"friendly": friendly_result if not friendly_result.startswith("RRULE") else None,
+			"parameterised": str(parsed_result),
+			"friendly": str(friendly_result) if not friendly_result.startswith("RRULE") else None,
 		})
 	)
 	exit(0)
