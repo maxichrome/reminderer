@@ -9,11 +9,13 @@ A reminder bot for [Discord]. Focused on privacy, because people who use it as a
 ## To-Do
 
 - [ ] parse "when" parameter
-      will use [recurrent](https://github.com/kvh/recurrent))
+      (will use [recurrent](https://github.com/kvh/recurrent))
 - [ ] set up timed reminder system
       (maybe use a serverless function for this)
 - [ ] explore deployment options
       (maybe use a serverless function for command triggers too)
+- [ ] add delivery preferences
+      (get reminders sent via DM or in a private server thread)
 
 [discord]: https://discord.com/
 [contact-discord]: https://discord.com/users/757834655516065862
